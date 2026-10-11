@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>mcp-go #1077 — docstring warning follow-up</title>
+<style>body{background:#f4f6fa;color:#16233a;font:16px/1.7 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;margin:0}main{max-width:850px;margin:48px auto;padding:32px;background:white;border:1px solid #dce3ed;border-radius:14px}h1{line-height:1.2}code{font:14px/1.6 ui-monospace,SFMono-Regular,monospace;overflow-wrap:anywhere}a{color:#1758ba}li{margin:10px 0}.muted{color:#617087;font-size:14px}@media(max-width:700px){main{margin:20px;padding:24px}}</style>
+<main>
+<p class="muted">PR #1077 · follow-up validation · 2026-10-12</p>
+<h1>Test-function descriptions added</h1>
+<p>CodeRabbit found no actionable code issues, but warned that docstring coverage was 42.86% across 14 analyzed functions. I added GoDoc-style descriptions to all eight new test functions; each describes the behavior checked by that regression. No production code or assertions changed.</p>
+<p>Follow-up commit: <code>3428dda0ab1eb6923bf0b006dd5ecb9eaeca080b</code></p>
+<ul>
+<li><code>GOTOOLCHAIN=go1.25.5 go test ./... -race -count=1</code> — exit 0. <a href="validation/docstrings-go125-race.log">Actual full output</a>.</li>
+<li><code>golangci-lint v2.8.0 run</code> under Go 1.26.3 — exit 0, <code>0 issues.</code> <a href="validation/docstrings-lint.log">Actual output</a>.</li>
+<li><code>gofmt</code> applied; <code>git diff --check</code> passed.</li>
+</ul>
+<p>The bot must re-run to confirm its own coverage calculation. Local validation is not a substitute for upstream CI approval. The upstream workflows previously reported <code>action_required</code>; my account has read-only access and cannot approve them.</p>
+<p><a href="report.html">Original solution, data-flow diagram, before/after screenshot and validation scope</a> · <a href="https://github.com/mark3labs/mcp-go/pull/1077">Upstream PR</a>.</p>
+<p class="muted">AI-assisted implementation and validation, disclosed in the PR. Original report/logs are retained as a record of the functional patch; this file records the later comment-only update.</p>
+</main>
+</html>
