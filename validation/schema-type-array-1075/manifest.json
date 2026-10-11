@@ -1,0 +1,29 @@
+{
+  "issue": "https://github.com/mark3labs/mcp-go/issues/1075",
+  "base": "423b062c4db141021c908c2b6ddc1ef88b584403",
+  "patch": "3b4107c4cdf24100ae1864df025f828d87f54f7b",
+  "date": "2026-10-12",
+  "platform": "macOS arm64",
+  "go_versions": ["1.26.3", "1.25.5"],
+  "exit_codes": {
+    "baseline.log": 1,
+    "focused.log": 0,
+    "full-race.log": 0,
+    "otel-race.log": 0,
+    "ci-go125-race.log": 0,
+    "ci-go125-otel-race.log": 0,
+    "vet.log": 0,
+    "otel-vet.log": 0,
+    "lint.log": 0,
+    "otel-lint.log": 0,
+    "build.log": 0,
+    "generate.log": 0,
+    "conformance-checker.log": 0,
+    "conformance.log": 0
+  },
+  "baseline": "Expected failure: original production code plus only wire/HTTP regression fixtures. Six failing leaf cases and one passing string control.",
+  "conformance": "Active suite 28/30; only pre-existing baseline logging/progress notification failures. Each failed 6/10 repetitions. Not a full-30-pass claim.",
+  "screenshots": "Chromium screenshots of the solution report and HTML-rendered excerpts from actual saved test logs; not application GUI testing or live GitHub MCP testing.",
+  "not_tested": ["live GitHub MCP service", "LLM provider", "exhaustive JSON Schema compliance"],
+  "public_log_redaction": "Local workspace path replaced with <workspace>. Test result lines unchanged."
+}

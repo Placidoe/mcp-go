@@ -1,0 +1,52 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>mcp-go #1075 — actual regression test logs</title><style>*{box-sizing:border-box}body{margin:0;background:#f4f6fa;color:#16233a;font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}main{max-width:1180px;margin:auto;padding:48px 40px}h1{font-size:40px;line-height:1.15;letter-spacing:-1px;margin:14px 0 18px}h2{font-size:23px;margin:0 0 16px}h3{font-size:17px}p{margin:10px 0}a{color:#1758ba}code{font:14px/1.6 ui-monospace,SFMono-Regular,monospace;background:#edf1f7;padding:2px 5px;border-radius:4px}pre{font:13px/1.65 ui-monospace,SFMono-Regular,monospace;white-space:pre-wrap;overflow-wrap:anywhere;background:#142033;color:#e1ebf8;padding:22px;border-radius:12px;margin:0}section{background:white;border:1px solid #dce3ed;border-radius:14px;padding:28px;margin:24px 0}.eyebrow{color:#566980;font-size:13px;letter-spacing:2px;font-weight:650}.muted{color:#586a82;font-size:14px}.chips,.flow{display:flex;gap:12px;flex-wrap:wrap}.chip{padding:7px 12px;border-radius:8px;background:#e6f3ed;color:#146740;font-weight:600;font-size:14px}.amber{background:#fff2dc;color:#865500}.flow{align-items:stretch}.step{flex:1;min-width:185px;background:#edf3fc;border-radius:10px;padding:20px}.arrow{align-self:center;color:#7890b2;font-size:24px}.step b{display:block;font-size:16px}.step small{display:block;margin-top:8px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}table{width:100%;border-collapse:collapse;font-size:14px}th,td{text-align:left;vertical-align:top;border-bottom:1px solid #e3e9f1;padding:13px 10px}th{color:#566980}.note{border-left:3px solid #d79e37;padding-left:16px}.log-card{min-width:0}footer{color:#617087;font-size:13px}li{margin:7px 0}@media(max-width:760px){main{padding:24px 18px}.grid{grid-template-columns:1fr}h1{font-size:30px}.arrow{display:none}}</style><main><div class="eyebrow">SAVED COMMAND OUTPUT · RENDERED LOG SCREENSHOT</div><h1>Same regressions. Before and after.</h1><p class="muted">Base 423b062c vs patch 3b4107c4 · localhost HTTP fixture · 2026-10-12<br>Excerpts below are selected, unaltered lines; complete outputs are supplied alongside this image.</p><div class="grid"><section class="log-card"><h2>Before · expected exit 1</h2><p class="muted">Original production code + regression fixtures</p><pre>=== RUN   TestListToolsSchemaTypeArrayRegression
+=== RUN   TestListToolsSchemaTypeArrayRegression/existing_string_type
+=== RUN   TestListToolsSchemaTypeArrayRegression/nullable_object_type
+        	            	json: cannot unmarshal array into Go struct field Tool.tools.outputSchema.Alias.type of type string
+=== RUN   TestListToolsSchemaTypeArrayRegression/single_element_array_stays_an_array
+        	            	json: cannot unmarshal array into Go struct field Tool.tools.outputSchema.Alias.type of type string
+=== RUN   TestListToolsSchemaTypeArrayRegression/scalar_union
+        	            	json: cannot unmarshal array into Go struct field Tool.tools.outputSchema.Alias.type of type string
+--- FAIL: TestListToolsSchemaTypeArrayRegression (0.00s)
+    --- PASS: TestListToolsSchemaTypeArrayRegression/existing_string_type (0.00s)
+    --- FAIL: TestListToolsSchemaTypeArrayRegression/nullable_object_type (0.00s)
+    --- FAIL: TestListToolsSchemaTypeArrayRegression/single_element_array_stays_an_array (0.00s)
+    --- FAIL: TestListToolsSchemaTypeArrayRegression/scalar_union (0.00s)
+FAIL
+FAIL	github.com/mark3labs/mcp-go/mcp	0.540s
+=== RUN   TestListToolsSchemaTypeArrayHTTP
+=== RUN   TestListToolsSchemaTypeArrayHTTP/ListTools
+        	            	failed to unmarshal response: json: cannot unmarshal array into Go struct field Tool.tools.outputSchema.Alias.type of type string
+=== RUN   TestListToolsSchemaTypeArrayHTTP/ListToolsByPage
+        	            	failed to unmarshal response: json: cannot unmarshal array into Go struct field Tool.tools.outputSchema.Alias.type of type string
+=== RUN   TestListToolsSchemaTypeArrayHTTP/IterTools
+        	            	failed to unmarshal response: json: cannot unmarshal array into Go struct field Tool.tools.outputSchema.Alias.type of type string
+--- FAIL: TestListToolsSchemaTypeArrayHTTP (0.02s)
+    --- FAIL: TestListToolsSchemaTypeArrayHTTP/ListTools (0.00s)
+    --- FAIL: TestListToolsSchemaTypeArrayHTTP/ListToolsByPage (0.01s)
+    --- FAIL: TestListToolsSchemaTypeArrayHTTP/IterTools (0.00s)
+FAIL
+FAIL	github.com/mark3labs/mcp-go/client	0.828s
+FAIL</pre></section><section class="log-card"><h2>After · exit 0</h2><p class="muted">Patched production code + expanded regressions</p><pre>=== RUN   TestListToolsSchemaTypeArrayRegression
+=== RUN   TestListToolsSchemaTypeArrayRegression/existing_string_type
+=== RUN   TestListToolsSchemaTypeArrayRegression/nullable_object_type
+=== RUN   TestListToolsSchemaTypeArrayRegression/single_element_array_stays_an_array
+=== RUN   TestListToolsSchemaTypeArrayRegression/scalar_union
+--- PASS: TestListToolsSchemaTypeArrayRegression (0.00s)
+    --- PASS: TestListToolsSchemaTypeArrayRegression/existing_string_type (0.00s)
+    --- PASS: TestListToolsSchemaTypeArrayRegression/nullable_object_type (0.00s)
+    --- PASS: TestListToolsSchemaTypeArrayRegression/single_element_array_stays_an_array (0.00s)
+    --- PASS: TestListToolsSchemaTypeArrayRegression/scalar_union (0.00s)
+PASS
+ok  	github.com/mark3labs/mcp-go/mcp	0.540s
+=== RUN   TestListToolsSchemaTypeArrayHTTP
+=== RUN   TestListToolsSchemaTypeArrayHTTP/ListTools
+=== RUN   TestListToolsSchemaTypeArrayHTTP/ListToolsByPage
+=== RUN   TestListToolsSchemaTypeArrayHTTP/IterTools
+--- PASS: TestListToolsSchemaTypeArrayHTTP (0.00s)
+    --- PASS: TestListToolsSchemaTypeArrayHTTP/ListTools (0.00s)
+    --- PASS: TestListToolsSchemaTypeArrayHTTP/ListToolsByPage (0.00s)
+    --- PASS: TestListToolsSchemaTypeArrayHTTP/IterTools (0.00s)
+PASS
+ok  	github.com/mark3labs/mcp-go/client	0.680s
+PASS
+ok  	github.com/mark3labs/mcp-go/server	0.561s</pre></section></div><footer>No fabricated terminal output. Browser rendering of saved test logs; not a live GitHub integration test.</footer></main></html>

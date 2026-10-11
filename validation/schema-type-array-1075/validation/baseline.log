@@ -1,0 +1,55 @@
+=== RUN   TestListToolsSchemaTypeArrayRegression
+=== RUN   TestListToolsSchemaTypeArrayRegression/existing_string_type
+=== RUN   TestListToolsSchemaTypeArrayRegression/nullable_object_type
+    schema_type_array_regression_test.go:25: 
+        	Error Trace:	<workspace>/research/upstreams/mcp-go-1075-shallow/mcp/schema_type_array_regression_test.go:25
+        	Error:      	Received unexpected error:
+        	            	json: cannot unmarshal array into Go struct field Tool.tools.outputSchema.Alias.type of type string
+        	Test:       	TestListToolsSchemaTypeArrayRegression/nullable_object_type
+=== RUN   TestListToolsSchemaTypeArrayRegression/single_element_array_stays_an_array
+    schema_type_array_regression_test.go:25: 
+        	Error Trace:	<workspace>/research/upstreams/mcp-go-1075-shallow/mcp/schema_type_array_regression_test.go:25
+        	Error:      	Received unexpected error:
+        	            	json: cannot unmarshal array into Go struct field Tool.tools.outputSchema.Alias.type of type string
+        	Test:       	TestListToolsSchemaTypeArrayRegression/single_element_array_stays_an_array
+=== RUN   TestListToolsSchemaTypeArrayRegression/scalar_union
+    schema_type_array_regression_test.go:25: 
+        	Error Trace:	<workspace>/research/upstreams/mcp-go-1075-shallow/mcp/schema_type_array_regression_test.go:25
+        	Error:      	Received unexpected error:
+        	            	json: cannot unmarshal array into Go struct field Tool.tools.outputSchema.Alias.type of type string
+        	Test:       	TestListToolsSchemaTypeArrayRegression/scalar_union
+--- FAIL: TestListToolsSchemaTypeArrayRegression (0.00s)
+    --- PASS: TestListToolsSchemaTypeArrayRegression/existing_string_type (0.00s)
+    --- FAIL: TestListToolsSchemaTypeArrayRegression/nullable_object_type (0.00s)
+    --- FAIL: TestListToolsSchemaTypeArrayRegression/single_element_array_stays_an_array (0.00s)
+    --- FAIL: TestListToolsSchemaTypeArrayRegression/scalar_union (0.00s)
+FAIL
+FAIL	github.com/mark3labs/mcp-go/mcp	0.540s
+=== RUN   TestListToolsSchemaTypeArrayHTTP
+=== RUN   TestListToolsSchemaTypeArrayHTTP/ListTools
+    schema_type_array_test.go:25: 
+        	Error Trace:	<workspace>/research/upstreams/mcp-go-1075-shallow/client/schema_type_array_test.go:25
+        	Error:      	Received unexpected error:
+        	            	failed to unmarshal response: json: cannot unmarshal array into Go struct field Tool.tools.outputSchema.Alias.type of type string
+        	Test:       	TestListToolsSchemaTypeArrayHTTP/ListTools
+=== RUN   TestListToolsSchemaTypeArrayHTTP/ListToolsByPage
+    schema_type_array_test.go:29: 
+        	Error Trace:	<workspace>/research/upstreams/mcp-go-1075-shallow/client/schema_type_array_test.go:29
+        	Error:      	Received unexpected error:
+        	            	failed to unmarshal response: json: cannot unmarshal array into Go struct field Tool.tools.outputSchema.Alias.type of type string
+        	Test:       	TestListToolsSchemaTypeArrayHTTP/ListToolsByPage
+=== RUN   TestListToolsSchemaTypeArrayHTTP/IterTools
+    schema_type_array_test.go:33: 
+        	Error Trace:	<workspace>/research/upstreams/mcp-go-1075-shallow/client/schema_type_array_test.go:33
+        	            				<workspace>/research/upstreams/mcp-go-1075-shallow/client/iter.go:40
+        	            				<workspace>/research/upstreams/mcp-go-1075-shallow/client/schema_type_array_test.go:32
+        	Error:      	Received unexpected error:
+        	            	failed to unmarshal response: json: cannot unmarshal array into Go struct field Tool.tools.outputSchema.Alias.type of type string
+        	Test:       	TestListToolsSchemaTypeArrayHTTP/IterTools
+--- FAIL: TestListToolsSchemaTypeArrayHTTP (0.02s)
+    --- FAIL: TestListToolsSchemaTypeArrayHTTP/ListTools (0.00s)
+    --- FAIL: TestListToolsSchemaTypeArrayHTTP/ListToolsByPage (0.01s)
+    --- FAIL: TestListToolsSchemaTypeArrayHTTP/IterTools (0.00s)
+FAIL
+FAIL	github.com/mark3labs/mcp-go/client	0.828s
+FAIL

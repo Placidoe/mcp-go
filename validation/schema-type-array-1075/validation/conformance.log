@@ -1,0 +1,7 @@
+Running the official active server conformance suite
+Active suite: 28/30 scenarios passed
+
+Checking known intermittent notification scenarios for a stale baseline
+tools-call-with-logging: failed 6/10 repeated runs
+tools-call-with-progress: failed 6/10 repeated runs
+Conformance suite passed; only baseline notification failures were observed

@@ -1,0 +1,30 @@
+ok  	github.com/mark3labs/mcp-go/client	26.199s
+ok  	github.com/mark3labs/mcp-go/client/transport	75.595s
+ok  	github.com/mark3labs/mcp-go/e2e	7.821s
+?   	github.com/mark3labs/mcp-go/examples/conformance	[no test files]
+?   	github.com/mark3labs/mcp-go/examples/custom_context	[no test files]
+?   	github.com/mark3labs/mcp-go/examples/dynamic_path	[no test files]
+?   	github.com/mark3labs/mcp-go/examples/elicitation	[no test files]
+?   	github.com/mark3labs/mcp-go/examples/everything	[no test files]
+?   	github.com/mark3labs/mcp-go/examples/filesystem_stdio_client	[no test files]
+?   	github.com/mark3labs/mcp-go/examples/in_process	[no test files]
+?   	github.com/mark3labs/mcp-go/examples/inprocess_sampling	[no test files]
+?   	github.com/mark3labs/mcp-go/examples/multi_round_trip	[no test files]
+?   	github.com/mark3labs/mcp-go/examples/oauth_client	[no test files]
+?   	github.com/mark3labs/mcp-go/examples/roots_client	[no test files]
+?   	github.com/mark3labs/mcp-go/examples/roots_http_client	[no test files]
+?   	github.com/mark3labs/mcp-go/examples/roots_http_server	[no test files]
+?   	github.com/mark3labs/mcp-go/examples/roots_server	[no test files]
+?   	github.com/mark3labs/mcp-go/examples/sampling_client	[no test files]
+?   	github.com/mark3labs/mcp-go/examples/sampling_http_client	[no test files]
+?   	github.com/mark3labs/mcp-go/examples/sampling_http_server	[no test files]
+?   	github.com/mark3labs/mcp-go/examples/sampling_server	[no test files]
+?   	github.com/mark3labs/mcp-go/examples/simple_client	[no test files]
+?   	github.com/mark3labs/mcp-go/examples/structured_input_and_output	[no test files]
+?   	github.com/mark3labs/mcp-go/examples/typed_tools	[no test files]
+ok  	github.com/mark3labs/mcp-go/mcp	2.270s
+ok  	github.com/mark3labs/mcp-go/mcptest	2.450s
+ok  	github.com/mark3labs/mcp-go/server	18.802s
+?   	github.com/mark3labs/mcp-go/server/internal/gen	[no test files]
+?   	github.com/mark3labs/mcp-go/server/servertest	[no test files]
+ok  	github.com/mark3labs/mcp-go/tracing	2.299s

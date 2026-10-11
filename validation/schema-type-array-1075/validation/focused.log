@@ -1,0 +1,58 @@
+=== RUN   TestListToolsSchemaTypeArrayRegression
+=== RUN   TestListToolsSchemaTypeArrayRegression/existing_string_type
+=== RUN   TestListToolsSchemaTypeArrayRegression/nullable_object_type
+=== RUN   TestListToolsSchemaTypeArrayRegression/single_element_array_stays_an_array
+=== RUN   TestListToolsSchemaTypeArrayRegression/scalar_union
+--- PASS: TestListToolsSchemaTypeArrayRegression (0.00s)
+    --- PASS: TestListToolsSchemaTypeArrayRegression/existing_string_type (0.00s)
+    --- PASS: TestListToolsSchemaTypeArrayRegression/nullable_object_type (0.00s)
+    --- PASS: TestListToolsSchemaTypeArrayRegression/single_element_array_stays_an_array (0.00s)
+    --- PASS: TestListToolsSchemaTypeArrayRegression/scalar_union (0.00s)
+=== RUN   TestSchemaTypeArrayRepresentation
+--- PASS: TestSchemaTypeArrayRepresentation (0.00s)
+=== RUN   TestSchemaTypeArrayInputRoundTrip
+--- PASS: TestSchemaTypeArrayInputRoundTrip (0.00s)
+=== RUN   TestSchemaTypeArrayGeneratedInputReplacement
+=== RUN   TestSchemaTypeArrayGeneratedInputReplacement/generated
+=== RUN   TestSchemaTypeArrayGeneratedInputReplacement/cached
+--- PASS: TestSchemaTypeArrayGeneratedInputReplacement (0.00s)
+    --- PASS: TestSchemaTypeArrayGeneratedInputReplacement/generated (0.00s)
+    --- PASS: TestSchemaTypeArrayGeneratedInputReplacement/cached (0.00s)
+=== RUN   TestSchemaTypeArrayRejectsWrongJSONTypes
+=== RUN   TestSchemaTypeArrayRejectsWrongJSONTypes/1
+=== RUN   TestSchemaTypeArrayRejectsWrongJSONTypes/true
+=== RUN   TestSchemaTypeArrayRejectsWrongJSONTypes/{}
+=== RUN   TestSchemaTypeArrayRejectsWrongJSONTypes/["object",1]
+=== RUN   TestSchemaTypeArrayRejectsWrongJSONTypes/["object",{}]
+--- PASS: TestSchemaTypeArrayRejectsWrongJSONTypes (0.00s)
+    --- PASS: TestSchemaTypeArrayRejectsWrongJSONTypes/1 (0.00s)
+    --- PASS: TestSchemaTypeArrayRejectsWrongJSONTypes/true (0.00s)
+    --- PASS: TestSchemaTypeArrayRejectsWrongJSONTypes/{} (0.00s)
+    --- PASS: TestSchemaTypeArrayRejectsWrongJSONTypes/["object",1] (0.00s)
+    --- PASS: TestSchemaTypeArrayRejectsWrongJSONTypes/["object",{}] (0.00s)
+=== RUN   TestSchemaTypeArrayRawSchemaConflict
+=== RUN   TestSchemaTypeArrayRawSchemaConflict/output=false
+=== RUN   TestSchemaTypeArrayRawSchemaConflict/output=true
+--- PASS: TestSchemaTypeArrayRawSchemaConflict (0.00s)
+    --- PASS: TestSchemaTypeArrayRawSchemaConflict/output=false (0.00s)
+    --- PASS: TestSchemaTypeArrayRawSchemaConflict/output=true (0.00s)
+PASS
+ok  	github.com/mark3labs/mcp-go/mcp	0.540s
+=== RUN   TestListToolsSchemaTypeArrayHTTP
+=== RUN   TestListToolsSchemaTypeArrayHTTP/ListTools
+=== RUN   TestListToolsSchemaTypeArrayHTTP/ListToolsByPage
+=== RUN   TestListToolsSchemaTypeArrayHTTP/IterTools
+--- PASS: TestListToolsSchemaTypeArrayHTTP (0.00s)
+    --- PASS: TestListToolsSchemaTypeArrayHTTP/ListTools (0.00s)
+    --- PASS: TestListToolsSchemaTypeArrayHTTP/ListToolsByPage (0.00s)
+    --- PASS: TestListToolsSchemaTypeArrayHTTP/IterTools (0.00s)
+PASS
+ok  	github.com/mark3labs/mcp-go/client	0.680s
+=== RUN   TestSchemaTypeArrayValidation
+=== RUN   TestSchemaTypeArrayValidation/input
+=== RUN   TestSchemaTypeArrayValidation/output
+--- PASS: TestSchemaTypeArrayValidation (0.00s)
+    --- PASS: TestSchemaTypeArrayValidation/input (0.00s)
+    --- PASS: TestSchemaTypeArrayValidation/output (0.00s)
+PASS
+ok  	github.com/mark3labs/mcp-go/server	0.561s
